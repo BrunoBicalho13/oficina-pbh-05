@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4</title>
+    <script>
+        function somar(){
+            x = parseInt(entrada1.value);
+            y = parseInt(entrada2.value);
+            var soma = x + y;
+
+            return soma;
+            
+        }
+        function processar(){
+            var i = 0, vetor = [];
+            do{
+                vetor[i++] = prompt("Informe o nome");
+            } while (confirm("Deseja informar outro nome?"))
+            resp.innerHTML = somar();
+            for(i=0; i < vetor.lenght ;i++){
+                resp.innerHTML += `${i}) ${vetor[i]} <br /> `;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type ="text" id ="entrada1">
+    <input type ="text" id ="entrada2">
+    <button onclick="processar()">ok</button>
+    <div id="resp"></div>
+</body>
+</html>
